@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>แบบฟอร์มจองทัวร์</h1>
+
+    <form action="">
+        <fieldset>
+            <legend>ข้อมูลทั่วไป</legend>
+            ชื่อ-สกุล : <br><input type="text" name="name" id="name" placeholder="กรอกชื่อ-สกุล"> *
+            <br>
+            Email : <br><input type="email" name="email" id="email"> *
+            <br>
+            โทรศัพท์ : <br><input type="tel" name="tel" id="tel"> *
+            <br>
+            ที่อยู่ : <br><textarea name="address" id="address" cols="30" rows="3"></textarea>
+            <br>
+            รหัสไปรษณีย์ : <br><input type="text" name="zipcode" id="zipcode" pattern="\d{5}" size="5"
+                title="zipcode must 5">
+            <br>
+            รูปผู้จอง : <br><input type="file" name="pic" id="pic">
+            
+
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>ข้อมูลเข้าสู่ระบบ</legend>
+            Username : <br><input type="text" name="username" id="username" pattern="\w{8,}">
+            <br>
+            <i>ประกอบด้วยตัวเลข ตัวอักษร หรือ_ตั้งแต่8ตัวขึ้นไป</i>
+            <br>
+            Password : <br><input type="password" name="password" id="password" pattern="{8,}">
+            <br>
+            <i>ประกอบด้วยอักขระอะไรก็ได้8ตัวขึ้นไป</i>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+            แพคเก็จทัวร์ : <select name="country" id="country">
+                <option value="" disabled selected>--select--</option>
+
+                <option value="usa">USA</option>
+                <option value="japan">Japan</option>
+                <option value="korea">Korea</option>
+                <option value="china">China</option>
+                <option value="france">Feance</option>
+            </select>
+            <br>
+            <label>วันที่เดินทาง : </label>
+            <input type="date" name="date" id="date">
+            <br>
+            <label>จำนวนผู้เดินทาง : </label>
+            <input type="number" name="number" id="number" min="1" max="10">
+            <br>
+            <label>เน้นการท่องเที่ยวแบบใด?</label>
+            <br>
+            <input type="checkbox" id="vacation1" name="vacation1" value="shopping">
+            <label for="vacation1">ช้อปปิ้ง</label>
+
+            <br>
+            <input type="checkbox" id="vacation2" name="vacation2" value="nature">
+            <label for="vacation2">ธรรมชาติ</label>
+            <br>
+            <input type="checkbox" id="vacation3" name="vacation3" value="sea">
+            <label for="vacation3">ทะเล</label>
+        </fieldset>
+        <br>
+        <label>ยอมรับเงื่อนไขและข้อตกลง</label>
+        <input type="radio" checked="checked">
+        <label for="yes">I agree</label>
+        <input type="radio">
+        <label for="no">I disagree</label>
+        <input type="submit" value="จอง">
+
+    </form>
+
+</body>
+
+</html>
