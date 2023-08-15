@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <style>
+        .menu {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        .content {
+            background-color: gainsboro;
+        }
+
+        .ads {
+            background-color: cornflowerblue;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        @media screen and (min-width : 601px) {
+            .flex {
+                flex-direction: row;
+            }
+
+            .menu {
+                order: 1;
+                flex-basis: 30%
+            }
+
+            .content {
+                order: 2;
+                flex-basis: 60%
+            }
+
+            .ads {
+                order: 3;
+                flex-basis: 10%
+            }
+        }
+
+        @media screen and (max-width : 600px) {
+            .flex {
+                flex-direction: column;
+            }
+
+            .menu {
+                order: 1;
+                flex-basis: 100%
+            }
+
+            .content {
+                order: 2;
+                flex-basis: 100%
+            }
+
+            .ads {
+                order: 3;
+                flex-basis: 100%
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex">
+        <div class="menu">Menu1<br>Menu2<br>Menu3<br></div>
+        <div class="content">In publishing, art, and communication, … as speech, writing or any of various arts".</div>
+        <div class="ads">advertising<br>advertising<br>advertising<br></div>
+    </div>
+</body>
+
+</html>
