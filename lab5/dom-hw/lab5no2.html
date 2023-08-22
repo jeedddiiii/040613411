@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        window.onload = function() {
+            const inputs = document.getElementsByTagName("input");
+
+            for (let i = 0; i < inputs.length; i++) {
+                const input = inputs[i];
+                
+                input.addEventListener("blur", function() {
+                    input.style.color = "green";
+                });
+
+                input.addEventListener("focus", function() {
+                    input.style.color = ""; 
+                });
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <h1>Register</h1>
+    Name: <input type="text" id="name"><br>
+    Age: <input type="text" id="age"><br>
+    Birthday: <input type="text" id="bd"><br>
+</body>
+
+</html>
