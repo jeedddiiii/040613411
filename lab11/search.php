@@ -40,6 +40,9 @@
             echo "<p>Address: " . $result['address'] . "</p>";
             echo "<p>Mobile: " . $result['mobile'] . "</p>";
             echo "<p>Email: " . $result['email'] . "</p>";
+            
+            // Display the user's photo using the specified format
+            echo "<img src='img/" . $result['username'] . ".jpg' width='100'><br>";
         } else {
             echo "User not found.";
         }
